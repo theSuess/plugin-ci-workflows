@@ -666,7 +666,7 @@ jobs:
       - name: Test and build backend
         id: backend
         if: ${{ steps.check-for-backend.outputs.has-backend == 'true' }}
-        uses: grafana/plugin-ci-workflows/actions/internal/plugins/backend@main
+        uses: $/actions/internal/plugins/backend
         with:
           github-token: ${{ steps.generate-github-token.outputs.token || '' }}
           plugin-directory: ${{ inputs.plugin-directory }}
